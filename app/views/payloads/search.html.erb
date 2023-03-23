@@ -1,0 +1,44 @@
+
+    <!-- form_tag with search field -->
+    <%= form_tag( search_url , :method => 'get', style: "display: flex; justify-content: center", id: "my-form", class: 'container') do %>
+    <%= text_field_tag(:search, params[:search], placeholder: "Enter name", class:"search_field form-control", :onchange => 'this.form.submit()')%>
+    <% end %>
+    <% if @payloads.count > 0 %>
+  <div class="container" style="padding-top: 10px;">
+      <table class= "table table-striped table-bordered mt-3">
+    <thead>
+      <tr>
+        <th class="col-1">Name</th>
+        <th class="col-4">Type</th>
+        <th class="col-6">Designed by</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!-- Get over all data and show it on the page in table-->
+        <% @payloads.each do |item| %>
+        <tr>
+          <td>
+            <%= item.name %>
+          </td>
+          <td>
+            <%= item.ptype %>
+          </td>
+          <td>
+            <%= item.designed_by %>
+          </td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+  </div>
+<!-- Pagination -->
+<div class="ms-5">
+    <div class="mt-2 ms-3">
+        <%= paginate @payloads %>
+    </div>
+</div>
+    <% else %>
+       <div class='container d-flex justify-content-center align-items-center'>
+         Nothing Found
+       </div>
+    <% end %>

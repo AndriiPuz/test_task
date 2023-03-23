@@ -1,0 +1,99 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+  .search_field {
+    margin-top: 10px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 300px !important;
+}
+.search_button {
+    margin-top: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.container {
+    background: rgb(246, 243, 243);
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.footer a:hover{
+    color:black;
+}
+#full-color {
+    background-color: rgb(138, 137, 137);
+}
+.navbar-collapse.collapse.show {
+    color: black;
+}
+.footer-basic {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+ }
+
+ .footer{
+    background: rgb(138, 137, 137);
+    padding:10px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+
+}
+
+.icon-row > a {
+    display: inline-block;
+    width: unset !important;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+.footer a{
+    text-decoration:none;
+    color:white;
+    transition:0.5s;
+}
+.footer a i{
+    font-size:2em;
+    margin:0% 1%;
+}
+
+.Copyright {
+    text-align: center;
+    color: gray;
+}
+
+.navbar a {text-decoration: none;}
+
+.title_name:hover {
+    color:rgb(183, 196, 207);
+}
+
+.title_name {
+    color: rgb(17, 17, 17);
+    margin-right: 10px;
+}
+/* .pagination > li > a[rel="prev"] {
+    display: none;
+}
+.pagination > li > a[rel="next"] {
+    display: none;
+} */
